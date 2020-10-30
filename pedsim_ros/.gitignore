@@ -1,0 +1,9 @@
+.svn
+.svn/*
+*.pyc
+build
+*~
+\#*#
+.\#*
+.idea/
+cmake-build-debug/
