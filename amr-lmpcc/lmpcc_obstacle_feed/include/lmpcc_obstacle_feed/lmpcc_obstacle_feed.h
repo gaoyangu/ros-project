@@ -90,6 +90,7 @@
 #include <visualization_msgs/MarkerArray.h>
 #include <spencer_tracking_msgs/TrackedPersons.h>
 #include <pedsim_msgs/TrackedPersons.h>
+#include <obstacle_detector/Obstacles.h>
 
 // filter
 #include <lmpcc_obstacle_feed/obstacle_prediction.h>
@@ -155,6 +156,7 @@ private:
     void detectionsCallback(const vision_msgs::Detection3DArray& objects);
     void pedestriansCallback(const spencer_tracking_msgs::TrackedPersons& person);
     void PedsimCallback(const pedsim_msgs::TrackedPersons& person);
+    void trackedObstaclesCallback(const obstacle_detector::Obstacles& person);
     void optitrackCallback(const nav_msgs::Path& predicted_path);
     void updateObstacles(const ros::TimerEvent& event);
     void publishObstacles(const lmpcc_msgs::lmpcc_obstacle_array& obstacles);

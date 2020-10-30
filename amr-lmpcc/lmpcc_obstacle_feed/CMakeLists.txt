@@ -27,6 +27,7 @@ find_package(catkin REQUIRED COMPONENTS
   lmpcc_msgs
   spencer_tracking_msgs
   pedsim_msgs
+  obstacle_detector
 )
 
 ## System dependencies are found with CMake's conventions

@@ -39,7 +39,7 @@
                 <ray>
                     <scan>
                       <horizontal>
-                        <samples>360</samples>
+                        <samples>800</samples>
                         <resolution>1</resolution>
                         <min_angle>-3</min_angle>
                         <max_angle>3</max_angle>
@@ -57,7 +57,7 @@
                     </noise>
                 </ray>
                 <plugin name="gazebo_rplidar" filename="libgazebo_ros_laser.so">
-                    <topicName>/scan</topicName>
+                    <topicName>scan</topicName>
                     <frameName>laser_link</frameName>
                 </plugin>
             </sensor>
