@@ -17,6 +17,6 @@
     <node pkg="tf" type="static_transform_publisher" name="map_odom_broadcaster" args="0 0 0 0 0 0 /map /mbot_1/odom 100" />
 </group>
     <!-- 运行rviz -->
-    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find mbot_navigation)/rviz/map_amcl.rviz"/>
+    <node pkg="rviz" type="rviz" name="rviz" args="-d $(find lmpcc)/rviz_config/multi_config.rviz"/>
 
 </launch>

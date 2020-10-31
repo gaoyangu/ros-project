@@ -14,6 +14,7 @@
     <!--Publish the mobile robot pose -->
     <node name="mobile_robot_state_publisher" pkg="mobile_robot_state_publisher" type="mobile_robot_state_publisher_node" respawn="false" output="screen">
             <rosparam command="load" file="$(arg config)/config/jackal.yaml" />
+            <param name="base_frame" value="mbot_1/base_link"/>
     </node>
     
     <rosparam command="load" file="$(find lmpcc)/config/lmpcc_config_parameter.yaml"/>
