@@ -51,6 +51,7 @@
 
         <!-- 在gazebo中加载机器人模型-->
         <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-            args="-urdf -model mbot_2 -param robot_description -x 2"/> 
+            args="-urdf -model mbot_2 -param robot_description -x 2 -Y 3.14"/> 
     </group>
+
 </launch>

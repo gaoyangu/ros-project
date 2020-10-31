@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+
+<launch>
+<group ns="mbot_1">
+    <!-- Debug Info -->
+    <arg name="debug" default="false" />
+    <arg unless="$(arg debug)" name="launch_prefix" value="" />
+    <arg     if="$(arg debug)" name="launch_prefix" value="gdb --ex run --args" />
+    <arg name="debug_config_parameter" default="false"/>
+    <arg name="debug_kinematic_cal" default="false"/>
+    <arg name="debug_collision_detection" default="false"/>
+    <arg name="config" default="$(find mobile_robot_state_publisher)"/>
+
+    <!--Publish the mobile robot pose -->
+    <node name="mobile_robot_state_publisher" pkg="mobile_robot_state_publisher" type="mobile_robot_state_publisher_node" respawn="false" output="screen">
+            <rosparam command="load" file="$(arg config)/config/jackal.yaml" />
+            <param name="base_frame" value="mbot_1/base_link"/>
+    </node>
+    
+    <rosparam command="load" file="$(find lmpcc)/config/lmpcc_config_parameter.yaml"/>
+
+    <node pkg="lmpcc" type="lmpcc_node" name="lmpcc_node" cwd="node" respawn="false" output="screen"/>
+</group>
+
+<group ns="mbot_2">
+    <!-- Debug Info -->
+    <arg name="debug" default="false" />
+    <arg unless="$(arg debug)" name="launch_prefix" value="" />
+    <arg     if="$(arg debug)" name="launch_prefix" value="gdb --ex run --args" />
+    <arg name="debug_config_parameter" default="false"/>
+    <arg name="debug_kinematic_cal" default="false"/>
+    <arg name="debug_collision_detection" default="false"/>
+    <arg name="config" default="$(find mobile_robot_state_publisher)"/>
+
+    <!--Publish the mobile robot pose -->
+    <node name="mobile_robot_state_publisher" pkg="mobile_robot_state_publisher" type="mobile_robot_state_publisher_node" respawn="false" output="screen">
+            <rosparam command="load" file="$(arg config)/config/jackal.yaml" />
+            <param name="base_frame" value="mbot_2/base_link"/>
+    </node>
+    
+    <rosparam command="load" file="$(find lmpcc)/config/lmpcc_config_parameter.yaml"/>
+
+    <node pkg="lmpcc" type="lmpcc_node" name="lmpcc_node" cwd="node" respawn="false" output="screen"/>
+</group>
+</launch>  
