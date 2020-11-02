@@ -6,6 +6,8 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
+        - /MarkerArray3
+        - /MarkerArray7
       Splitter Ratio: 0.5
     Tree Height: 1868
   - Class: rviz/Selection
@@ -337,7 +339,7 @@ Visualization Manager:
       Marker Topic: /mbot_1/robot_collision_space
       Name: MarkerArray
       Namespaces:
-        trajectory: true
+        {}
       Queue Size: 100
       Value: true
     - Class: rviz/MarkerArray
@@ -353,7 +355,7 @@ Visualization Manager:
       Marker Topic: /mbot_1/global_plan
       Name: MarkerArray
       Namespaces:
-        trajectory: true
+        {}
       Queue Size: 100
       Value: true
     - Alpha: 1
@@ -560,6 +562,14 @@ Visualization Manager:
       Name: MarkerArray
       Namespaces:
         trajectory: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /mbot_2/global_plan
+      Name: MarkerArray
+      Namespaces:
+        {}
       Queue Size: 100
       Value: true
   Enabled: true
