@@ -43,5 +43,5 @@ predefined_obstacles:
     v_x: [-0.5, 0.15, 0.3, 0.0]
     v_y: [0.0, 0.0, 0.0, 0.0]
     dimensions:
-        minor_semiaxis: [0.3, 0.3, 0.3, 0.3]
-        major_semiaxis: [0.3, 0.3, 0.3, 0.3]
+        minor_semiaxis: [0.2, 0.3, 0.3, 0.3]
+        major_semiaxis: [0.2, 0.3, 0.3, 0.3]
