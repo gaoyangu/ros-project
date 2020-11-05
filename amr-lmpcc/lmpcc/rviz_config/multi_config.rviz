@@ -6,7 +6,7 @@ Panels:
       Expanded:
         - /Global Options1
         - /Status1
-        - /MarkerArray3
+        - /MarkerArray4
         - /MarkerArray7
       Splitter Ratio: 0.5
     Tree Height: 1868
@@ -406,7 +406,7 @@ Visualization Manager:
       Value: true
     - Class: rviz/MarkerArray
       Enabled: true
-      Marker Topic: /collision_free_area
+      Marker Topic: /mbot_1/collision_free_area
       Name: MarkerArray
       Namespaces:
         {}
@@ -561,7 +561,7 @@ Visualization Manager:
       Marker Topic: /mbot_2/robot_collision_space
       Name: MarkerArray
       Namespaces:
-        trajectory: true
+        {}
       Queue Size: 100
       Value: true
     - Class: rviz/MarkerArray
@@ -615,7 +615,7 @@ Visualization Manager:
       Pitch: 1.56979632
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 4.73221493
+      Yaw: 4.76221514
     Saved: ~
 Window Geometry:
   Displays:
