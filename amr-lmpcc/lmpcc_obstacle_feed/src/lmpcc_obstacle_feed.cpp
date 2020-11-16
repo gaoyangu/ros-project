@@ -820,7 +820,7 @@ void ObstacleFeed::pedestriansCallback(const spencer_tracking_msgs::TrackedPerso
 //obstacle_detector
 void ObstacleFeed::trackedObstaclesCallback(const obstacle_detector::Obstacles& person)
 {
-    ROS_INFO_STREAM("Obstacles callback!");
+    //ROS_INFO_STREAM("Obstacles callback!");
 
     double Xp, Yp;
     double q1, q2, q3, q4;
