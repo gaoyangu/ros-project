@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 """
-Converts a geometry_msgs/PoseArray into spencer_tracking_msgs/DetectedPersons which can be processed using a tracker, or visualized using
-spencer_tracking_rviz_plugin. This conversion is lossless.
+Converts /mobt_1/predicted_trajectory into /mbot_2/ellipse_objects_feed 
 """
 import rospy
 from nav_msgs.msg import Path
