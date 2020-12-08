@@ -54,6 +54,11 @@ global_path:
 collision_avoidance:
     n_obstacles: 4
 
+color:
+    r: 0.8
+    g: 0.0
+    b: 0.0
+
 # OCP parameters
 ocp:
     weights:

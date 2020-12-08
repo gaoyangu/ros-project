@@ -147,6 +147,10 @@ public:
     double search_window_size_;
 
     int n_obstacles_;
+    
+    float color_r_;
+    float color_g_;
+    float color_b_;
 
     /** predefined global reference path **/
     std::vector<double> ref_x_;

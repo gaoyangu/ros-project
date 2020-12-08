@@ -151,6 +151,8 @@
 
 typedef double real_t;
 
+static int flag = 0;
+
 class LMPCC
 {
     /** Managing execution of all classes of lmpcc
@@ -368,7 +370,7 @@ private:
 
     Eigen::Vector4d current_state_, last_state_;
 
-    visualization_msgs::Marker ellips1, global_plan;
+    visualization_msgs::Marker ellips1, global_plan, trajectory_vis;
 
     // Obstacles
     lmpcc_msgs::lmpcc_obstacle_array obstacles_;

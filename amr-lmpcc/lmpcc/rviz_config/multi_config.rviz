@@ -7,6 +7,9 @@ Panels:
         - /Global Options1
         - /Status1
         - /MarkerArray9
+        - /MarkerArray10
+        - /MarkerArray11
+        - /MarkerArray12
       Splitter Ratio: 0.5
     Tree Height: 1868
   - Class: rviz/Selection
@@ -438,7 +441,7 @@ Visualization Manager:
       Max Color: 255; 255; 255
       Max Intensity: 999999
       Min Color: 0; 0; 0
-      Min Intensity: -537.910156
+      Min Intensity: 0
       Name: LaserScan
       Position Transformer: XYZ
       Queue Size: 10
@@ -627,7 +630,7 @@ Visualization Manager:
       Marker Topic: /mbot_3/robot_collision_space
       Name: MarkerArray
       Namespaces:
-        {}
+        trajectory: true
       Queue Size: 100
       Value: true
     - Alpha: 1
@@ -658,7 +661,31 @@ Visualization Manager:
       Marker Topic: /mbot_3/global_plan
       Name: MarkerArray
       Namespaces:
-        {}
+        trajectory: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /mbot_1/pd_trajectory
+      Name: MarkerArray
+      Namespaces:
+        trajectory_test: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /mbot_2/pd_trajectory
+      Name: MarkerArray
+      Namespaces:
+        trajectory_test: true
+      Queue Size: 100
+      Value: true
+    - Class: rviz/MarkerArray
+      Enabled: true
+      Marker Topic: /mbot_3/pd_trajectory
+      Name: MarkerArray
+      Namespaces:
+        trajectory_test: true
       Queue Size: 100
       Value: true
   Enabled: true
@@ -686,7 +713,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 22.435461
+      Distance: 25.1277161
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1

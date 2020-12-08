@@ -277,6 +277,20 @@ bool LMPCC::initialize_visuals()
     global_plan.scale.x = 0.1;
     global_plan.scale.y = 0.1;
     global_plan.scale.z = 0.05;
+
+    trajectory_vis.type = visualization_msgs::Marker::CYLINDER;
+    trajectory_vis.id = 1000;
+    trajectory_vis.color.r = lmpcc_config_->color_r_;
+    trajectory_vis.color.g = lmpcc_config_->color_g_;
+    trajectory_vis.color.b = lmpcc_config_->color_b_;
+    trajectory_vis.color.a = 0.8;
+    trajectory_vis.header.frame_id = lmpcc_config_->planning_frame_;
+    trajectory_vis.ns = "trajectory_test";
+    trajectory_vis.action = visualization_msgs::Marker::ADD;
+    trajectory_vis.lifetime = ros::Duration(0);
+    trajectory_vis.scale.x = 0.2;
+    trajectory_vis.scale.y = 0.2;
+    trajectory_vis.scale.z = 0.05;
 }
 
 void  LMPCC::reset_solver(){
@@ -833,6 +847,29 @@ void LMPCC::publishGlobalPlan(void)
     global_plan_pub_.publish(plan);
 }
 
+void LMPCC::publishTrajectory(void)
+{
+    //ROS_INFO("LMPCC::publishTrajectory");
+    // Create MarkerArray for global path point visualization
+    visualization_msgs::MarkerArray plan;
+
+    // Iterate over all points in global path
+    for (int i = 0; i < pred_traj_.poses.size(); i++)
+    {
+        trajectory_vis.id = 1000 + flag + i;
+        trajectory_vis.pose.position.x = pred_traj_.poses[i].pose.position.x;
+        trajectory_vis.pose.position.y = pred_traj_.poses[i].pose.position.y;
+        trajectory_vis.pose.orientation.x = 0;
+        trajectory_vis.pose.orientation.y = 0;
+        trajectory_vis.pose.orientation.z = 0;
+        trajectory_vis.pose.orientation.w = 1;
+        plan.markers.push_back(trajectory_vis);
+    }
+    flag++;
+    // Publish markerarray of global path points
+    traj_pub_.publish(plan);
+}
+
 void LMPCC::publishLocalRefPath(void)
 {
     //ROS_INFO("LMPCC::publishLocalRefPath");
@@ -903,6 +940,7 @@ void LMPCC::publishPredictedTrajectory(void)
     }
 
 	pred_traj_pub_.publish(pred_traj_);
+    publishTrajectory();
 }
 
 void LMPCC::publishPredictedOutput(void)

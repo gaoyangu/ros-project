@@ -244,6 +244,22 @@ bool LMPCC_configuration::initialize()
         return false;
     }
 
+    if (!nh_config.getParam ("color/r", color_r_) )
+    {
+        ROS_WARN(" Parameter '/color not set on %s node" , ros::this_node::getName().c_str());
+        return false;
+    }
+    if (!nh_config.getParam ("color/g", color_g_) )
+    {
+        ROS_WARN(" Parameter '/color not set on %s node" , ros::this_node::getName().c_str());
+        return false;
+    }
+    if (!nh_config.getParam ("color/b", color_b_) )
+    {
+        ROS_WARN(" Parameter '/color not set on %s node" , ros::this_node::getName().c_str());
+        return false;
+    }
+
     /** OCP weight factors **/
     // Contouring control weight factors
     if (!nh_config.getParam ("ocp/weights/contour_weight_factors", contour_weight_factors_) )
