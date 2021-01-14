@@ -152,6 +152,8 @@ public:
     float color_g_;
     float color_b_;
 
+    int robot_id;
+
     /** predefined global reference path **/
     std::vector<double> ref_x_;
     std::vector<double> ref_y_;

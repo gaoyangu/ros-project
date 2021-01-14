@@ -260,6 +260,12 @@ bool LMPCC_configuration::initialize()
         return false;
     }
 
+    if (!nh_config.getParam ("robot_id", robot_id) )
+    {
+        ROS_WARN(" Parameter '/robot_id not set on %s node" , ros::this_node::getName().c_str());
+        return false;
+    }
+
     /** OCP weight factors **/
     // Contouring control weight factors
     if (!nh_config.getParam ("ocp/weights/contour_weight_factors", contour_weight_factors_) )

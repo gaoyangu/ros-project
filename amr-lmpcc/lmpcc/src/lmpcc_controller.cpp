@@ -146,6 +146,8 @@ bool LMPCC::initialize()
         contour_error_pub_ = nh.advertise<std_msgs::Float64MultiArray>("contour_error",1);
 		feedback_pub_ = nh.advertise<lmpcc_msgs::lmpcc_feedback>("controller_feedback",1);
 
+        team_status_pub_ = nh.advertise<lmpcc_msgs::RobotStatus>("goal_status", 10);
+
         reset_simulation_client_ = nh.serviceClient<std_srvs::Empty>("/gazebo/reset_world");
         reset_ekf_client_ = nh.serviceClient<robot_localization::SetPose>("/set_pose");
 
@@ -497,10 +499,17 @@ void LMPCC::controlLoop(const ros::TimerEvent &event)
         acadoVariables.u[3] = 0.0000001;           //slack variable
 
 		if(acadoVariables.x[3] > ss[2]) {
-
-            if((std::sqrt(std::pow(current_state_(0)-15,2)+std::pow(current_state_(1),2))<1) || (current_state_(0)>15)){
+            //if((std::sqrt(std::pow(current_state_(0) - lmpcc_config_->ref_x_.back(),2)+std::pow(current_state_(1) - lmpcc_config_->ref_y_.back(),2))<1) || (current_state_(0)>lmpcc_config_->ref_x_.back())){
+            if((std::sqrt(std::pow(current_state_(0) - lmpcc_config_->ref_x_.at(1),2)+std::pow(current_state_(1) - lmpcc_config_->ref_y_.at(1),2))< 0.5)){
 		        goal_reached_ = true;
                 ROS_ERROR_STREAM("GOAL REACHED");
+                ROS_INFO("goal: x = %f, y = %f", lmpcc_config_->ref_x_.at(1), lmpcc_config_->ref_y_.at(1));
+
+                lmpcc_msgs::RobotStatus status_msgs;
+                status_msgs.header.stamp = ros::Time::now();
+                status_msgs.robot_id = lmpcc_config_->robot_id;
+                status_msgs.is_ready = true;
+                team_status_pub_.publish(status_msgs);
 
                 if (loop_mode_)
                 {
@@ -680,7 +689,13 @@ void LMPCC::controlLoop(const ros::TimerEvent &event)
         }
 	}
 
-    if(!enable_output_ || acado_getKKT() > lmpcc_config_->kkt_tolerance_) {
+    if(!enable_output_ || acado_getKKT() > lmpcc_config_->kkt_tolerance_ || goal_reached_) {
+        if(acado_getKKT() > lmpcc_config_->kkt_tolerance_){
+            ROS_ERROR("acado_getKKKT()");
+        }
+        else if(goal_reached_){
+            ROS_ERROR("goal_reached_");
+        }
 		publishZeroJointVelocity();
 	}
 	else {

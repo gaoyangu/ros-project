@@ -7,7 +7,7 @@ from nav_msgs.msg import Path
 from lmpcc_msgs.msg import lmpcc_obstacle_array, lmpcc_obstacle
 
 def newMessageReceived(path):
-    rospy.loginfo("new Message")
+    # rospy.loginfo("new Message")
 
     obstacle_array = lmpcc_obstacle_array()
     obstacle_array.header = path.header
@@ -16,7 +16,7 @@ def newMessageReceived(path):
     obstacle.trajectory.poses = path.poses
 
     for pose in path.poses:
-        rospy.loginfo("%.2f" % (pose.pose.position.x))
+        # rospy.loginfo("%.2f" % (pose.pose.position.x))
         obstacle.major_semiaxis.append(0.2)
         obstacle.minor_semiaxis.append(0.2)
 
@@ -29,7 +29,7 @@ def newMessageReceived(path):
             obstacle.pose.position.y = 0
             obstacle.pose.position.z = 0
             obstacle_array.lmpcc_obstacles.append(obstacle)
-    rospy.loginfo("size: %.2f " % len(obstacle_array.lmpcc_obstacles) )
+    # rospy.loginfo("size: %.2f " % len(obstacle_array.lmpcc_obstacles) )
 
     pub.publish(obstacle_array)
     

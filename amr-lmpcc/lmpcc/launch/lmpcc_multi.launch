@@ -18,6 +18,12 @@
     </node>
     
     <rosparam command="load" file="$(find lmpcc)/config/lmpcc_config_parameter.yaml"/>
+    <!-- rosparam param="global_path/x">[0, 1, 2, 3, 4, 5]</rosparam -->
+    <rosparam param="global_path/x">[0, 6, 10, 15, 20, 25]</rosparam>
+    <rosparam param="global_path/y">[0, 0, 0, 0, 0, 0]</rosparam>
+    <rosparam param="global_path/theta">[0, 0, 0, 0, 0, 0]</rosparam>
+
+    <rosparam param="robot_id">1</rosparam>
 
     <node pkg="lmpcc" type="lmpcc_node" name="lmpcc_node" cwd="node" respawn="false" output="screen">
         <remap from="/robot_collision_space" to="/mbot_1/robot_collision_space"/>
@@ -41,12 +47,16 @@
     </node>
     
     <rosparam command="load" file="$(find lmpcc)/config/lmpcc_config_parameter.yaml"/>
-    <rosparam param="global_path/x">[2, 0, -5, -10, -15, -20]</rosparam>
+    <!--rosparam param="global_path/x">[4, 3, 2, 1, 0, -1]</rosparam -->
+    <rosparam param="global_path/x">[0, -1, -10, -15, -20, -25]</rosparam>
+    <rosparam param="global_path/y">[0, 0, 0, 0, 0, 0]</rosparam>
     <rosparam param="global_path/theta">[3.14, 3.14, 3.14, 3.14, 3.14, 3.14]</rosparam>
 
     <rosparam param="color/r">0.0</rosparam>
     <rosparam param="color/g">0.8</rosparam>
     <rosparam param="color/b">0.0</rosparam>
+
+    <rosparam param="robot_id">2</rosparam>
     
     <node pkg="lmpcc" type="lmpcc_node" name="lmpcc_node" cwd="node" respawn="false" output="screen">
         <remap from="/robot_collision_space" to="/mbot_2/robot_collision_space"/>
@@ -71,15 +81,22 @@
     
     <rosparam command="load" file="$(find lmpcc)/config/lmpcc_config_parameter.yaml"/>
     <rosparam param="global_path/x">[3, 3, 3, 3, 3, 3]</rosparam>
-    <rosparam param="global_path/y">[-1, 0, 3, 6, 9, 12]</rosparam>
+    <!-- rosparam param="global_path/y">[-1, 0, 1, 2, 3, 4]</rosparam -->
+    <rosparam param="global_path/y">[0, 3, 10, 15, 20, 25]</rosparam>
     <rosparam param="global_path/theta">[1.57, 1.57, 1.57, 1.57, 1.57, 1.57]</rosparam>
 
     <rosparam param="color/r">0.0</rosparam>
     <rosparam param="color/g">0.0</rosparam>
     <rosparam param="color/b">0.8</rosparam>
-    
+
+    <rosparam param="robot_id">3</rosparam>
+        
     <node pkg="lmpcc" type="lmpcc_node" name="lmpcc_node" cwd="node" respawn="false" output="screen">
         <remap from="/robot_collision_space" to="/mbot_3/robot_collision_space"/>
     </node>
 </group>
+
+    <node pkg="lmpcc" type="conversion.py" name="conversion" output="screen"/>
+    <node pkg="lmpcc" type="conversion_multi.py" name="conversion_multi" output="screen"/>
+
 </launch>  

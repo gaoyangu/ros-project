@@ -126,6 +126,7 @@
 #include <lmpcc_msgs/lmpcc_feedback.h>
 #include <lmpcc_msgs/lmpcc_obstacle.h>
 #include <lmpcc_msgs/lmpcc_obstacle_array.h>
+#include <lmpcc_msgs/RobotStatus.h>
 
 //Dynamic Reconfigure server
 #include <boost/thread/mutex.hpp>
@@ -264,6 +265,8 @@ public:
 
     // controlled joint velocity, should be control velocity of controller
     ros::Publisher controlled_velocity_pub_;
+
+    ros::Publisher team_status_pub_;
 
     // publish trajectory
     ros::Publisher traj_pub_, tr_path_pub_, pred_traj_pub_, pred_cmd_pub_,cost_pub_,robot_collision_space_pub_, global_plan_pub_,local_spline_traj_pub1_, local_spline_traj_pub2_, local_spline_traj_pub3_, local_spline_traj_pub4_, local_spline_traj_pub5_, contour_error_pub_, feedback_pub_;

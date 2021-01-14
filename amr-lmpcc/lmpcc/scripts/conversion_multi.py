@@ -8,7 +8,7 @@ from nav_msgs.msg import Path
 from lmpcc_msgs.msg import lmpcc_obstacle_array, lmpcc_obstacle
 
 def callback(path_01, path_02):
-    rospy.loginfo("new Message")
+    # rospy.loginfo("new Message")
 
     obstacle_array = lmpcc_obstacle_array()
     obstacle_array.header = path_01.header
@@ -17,7 +17,7 @@ def callback(path_01, path_02):
     obstacle_01 = lmpcc_obstacle()
     obstacle_01.trajectory.poses = path_01.poses
     for pose in path_01.poses:
-        rospy.loginfo("%.2f" % (pose.pose.position.x))
+        # rospy.loginfo("%.2f" % (pose.pose.position.x))
         obstacle_01.major_semiaxis.append(0.2)
         obstacle_01.minor_semiaxis.append(0.2)
     obstacle_array.lmpcc_obstacles.append(obstacle_01)
@@ -25,7 +25,7 @@ def callback(path_01, path_02):
     obstacle_02 = lmpcc_obstacle()
     obstacle_02.trajectory.poses = path_02.poses
     for pose in path_02.poses:
-        rospy.loginfo("%.2f" % (pose.pose.position.x))
+        # rospy.loginfo("%.2f" % (pose.pose.position.x))
         obstacle_02.major_semiaxis.append(0.2)
         obstacle_02.minor_semiaxis.append(0.2)
     obstacle_array.lmpcc_obstacles.append(obstacle_02)
@@ -37,7 +37,7 @@ def callback(path_01, path_02):
             obstacle.pose.position.y = 0
             obstacle.pose.position.z = 0
             obstacle_array.lmpcc_obstacles.append(obstacle)
-    rospy.loginfo("size: %.2f " % len(obstacle_array.lmpcc_obstacles) )
+    # rospy.loginfo("size: %.2f " % len(obstacle_array.lmpcc_obstacles) )
 
     pub.publish(obstacle_array)
     
