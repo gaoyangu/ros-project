@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<launch>
+<group ns="mbot_1">
+    <rosparam param="lmpcc/plan">True</rosparam>
+    <rosparam param="lmpcc/enable_output">True</rosparam>
+</group>
+
+<group ns="mbot_2">
+    <rosparam param="lmpcc/plan">True</rosparam>
+    <rosparam param="lmpcc/enable_output">True</rosparam>
+</group>
+
+<group ns="mbot_3">
+    <rosparam param="lmpcc/plan">True</rosparam>
+    <rosparam param="lmpcc/enable_output">True</rosparam>
+</group>
+</launch>  
