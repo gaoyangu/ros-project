@@ -2,64 +2,55 @@
 #include <ros/ros.h>
 #include <lmpcc_msgs/RobotStatus.h>
 
-#include <string>
-
-using namespace std;
+#define MAX_ROBOTS_NUM 20
 
 unsigned int teamSize;
+unsigned int robotsCount = 0;
+bool robotsReady[MAX_ROBOTS_NUM];
 
 ros::Subscriber team_status_sub;
-ros::Time timeBegin;
-ros::Time timeEnd;
-ros::Duration goal_time;
+ros::Publisher team_status_pub;
 
-bool startPlan;
-int flag;
+void teamStatusCallback(const lmpcc_msgs::RobotStatus::ConstPtr& status_msg);
 
-void teamStatusCallback(const lmpcc_msgs::RobotStatus& status_msg)
-{
-    int robot_id = status_msg.robot_id;
-    bool ready = status_msg.is_ready;
-    if(ready && flag == 0){
-        flag++;
-        timeEnd = ros::Time::now();
-        goal_time = timeEnd - timeBegin ;
-        ROS_INFO("Robot %d id ready!", robot_id);
-        ROS_INFO("using time: %f !", goal_time.toSec());
-    }
-}
-
-int main(int argc, char** argv)
+int main(int argc, char **argv)
 {
     if(argc < 2){
         ROS_ERROR("You must specify team size.");
         return -1;
     }
-
-    char * teamSizeStr = argv[1];
+    char *teamSizeStr = argv[1];
     teamSize = atoi(teamSizeStr);
 
-    flag = 0;
+    //check that robot id is between 0 and MAX_ROBOTS_NUM
+    if(teamSize > MAX_ROBOTS_NUM || teamSize < 0){
+        ROS_ERROR("The team size must be an integer number between 1 and %d", MAX_ROBOTS_NUM);
+        return -1;
+    }
 
     ros::init(argc, argv, "team_monitor");
     ros::NodeHandle nh;
+    team_status_pub = nh.advertise<lmpcc_msgs::RobotStatus>("team_status", 10);
+    team_status_sub = nh.subscribe("team_status", 1, &teamStatusCallback);
 
-    team_status_sub = nh.subscribe("mbot_1/goal_status", 1, &teamStatusCallback);
+    ROS_INFO("wait for robots to connect...");
+    ros::spin();
+}
 
-    while(ros::ok()){
+void teamStatusCallback(const lmpcc_msgs::RobotStatus::ConstPtr& status_msg){
+    int robot_id = status_msg->robot_id;
 
-        nh.getParam("mbot_1/plan", startPlan);
-
-        if(startPlan){
-            timeBegin = ros::Time::now();
-            ROS_INFO("startPlan == true");
+    //if (!robotsReady[robot_id])
+    if (status_msg->is_ready){
+        ROS_INFO("Robot %d id ready!\n", robot_id);
+        robotsReady[robot_id] = true;
+        robotsCount++;
+        if(robotsCount == teamSize){
+            ROS_INFO("All robots Go!");
+            lmpcc_msgs::RobotStatus status_msg;
+            status_msg.header.stamp = ros::Time::now();
+            status_msg.header.frame_id = "monitor";
+            team_status_pub.publish(status_msg);
         }
-        else{
-            ROS_INFO("startPlan == false");
-        }
-        
     }
-
-    // ros::spin();
-    return 0;
 }

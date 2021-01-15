@@ -244,6 +244,8 @@ public:
 
     void  reset_solver();
 
+    void teamStatusCallback(const lmpcc_msgs::RobotStatus::ConstPtr &status_msg);
+
     //Service clients
     ros::ServiceClient reset_simulation_client_,reset_ekf_client_;
     //reset simulation msg
@@ -266,7 +268,10 @@ public:
     // controlled joint velocity, should be control velocity of controller
     ros::Publisher controlled_velocity_pub_;
 
+    ros::Publisher goal_status_pub_;
+
     ros::Publisher team_status_pub_;
+    ros::Subscriber team_status_sub_;
 
     // publish trajectory
     ros::Publisher traj_pub_, tr_path_pub_, pred_traj_pub_, pred_cmd_pub_,cost_pub_,robot_collision_space_pub_, global_plan_pub_,local_spline_traj_pub1_, local_spline_traj_pub2_, local_spline_traj_pub3_, local_spline_traj_pub4_, local_spline_traj_pub5_, contour_error_pub_, feedback_pub_;
@@ -308,6 +313,8 @@ public:
     std::vector<double> collision_free_C1, collision_free_C2, collision_free_C3, collision_free_C4, collision_free_a1x ,collision_free_a1y, collision_free_a2x ,collision_free_a2y, collision_free_a3x ,collision_free_a3y, collision_free_a4x ,collision_free_a4y , collision_free_xmin, collision_free_xmax, collision_free_ymin, collision_free_ymax;
 
     ReferencePath referencePath;
+
+    bool team_ready_;
 
 private:
     /**
@@ -354,6 +361,8 @@ private:
     void ZRotToQuat(geometry_msgs::Pose& pose);
 
     void publishFeedback(int& it, double& time);
+
+    void publishReadyStatus();
 
     ros::NodeHandle nh;
 

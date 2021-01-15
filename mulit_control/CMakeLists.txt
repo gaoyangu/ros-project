@@ -136,7 +136,7 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/mulit_control_node.cpp)
 add_executable(team_monitor src/team_monitor.cpp)
-
+add_executable(goal_monitor src/goal_monitor.cpp)
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -152,6 +152,10 @@ add_executable(team_monitor src/team_monitor.cpp)
 #   ${catkin_LIBRARIES}
 # )
 target_link_libraries(team_monitor
+  ${catkin_LIBRARIES}
+)
+
+target_link_libraries(goal_monitor
   ${catkin_LIBRARIES}
 )
 
