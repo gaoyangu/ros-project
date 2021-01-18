@@ -115,6 +115,7 @@ bool LMPCC::initialize()
         segment_counter = 0;                          // Initialize reference path segment counter
 
         team_ready_ = false;
+        trajecty_sum_ = 0;
 
         // DEBUG
         if (lmpcc_config_->activate_debug_output_)
@@ -295,8 +296,8 @@ bool LMPCC::initialize_visuals()
     trajectory_vis.ns = "trajectory_test";
     trajectory_vis.action = visualization_msgs::Marker::ADD;
     trajectory_vis.lifetime = ros::Duration(0);
-    trajectory_vis.scale.x = 0.2;
-    trajectory_vis.scale.y = 0.2;
+    trajectory_vis.scale.x = 0.05;
+    trajectory_vis.scale.y = 0.05;
     trajectory_vis.scale.z = 0.05;
 }
 
@@ -512,9 +513,11 @@ void LMPCC::controlLoop(const ros::TimerEvent &event)
                 //if((std::sqrt(std::pow(current_state_(0) - lmpcc_config_->ref_x_.back(),2)+std::pow(current_state_(1) - lmpcc_config_->ref_y_.back(),2))<1) || (current_state_(0)>lmpcc_config_->ref_x_.back())){
                 if((std::sqrt(std::pow(current_state_(0) - lmpcc_config_->ref_x_.at(1),2)+std::pow(current_state_(1) - lmpcc_config_->ref_y_.at(1),2))< 0.5)){
                     goal_reached_ = true;
-                    ROS_ERROR_STREAM("GOAL REACHED");
-                    ROS_INFO("goal: x = %f, y = %f", lmpcc_config_->ref_x_.at(1), lmpcc_config_->ref_y_.at(1));
 
+                    ROS_ERROR_STREAM("GOAL REACHED");
+                    ROS_INFO("mbot_%d, goal: x = %f, y = %f", lmpcc_config_->robot_id, lmpcc_config_->ref_x_.at(1), lmpcc_config_->ref_y_.at(1));
+                    ROS_INFO("mbot_%d, sum = %f", lmpcc_config_->robot_id, trajecty_sum_);  
+                    
                     lmpcc_msgs::RobotStatus status_msgs;
                     status_msgs.header.stamp = ros::Time::now();
                     status_msgs.robot_id = lmpcc_config_->robot_id;
@@ -700,12 +703,12 @@ void LMPCC::controlLoop(const ros::TimerEvent &event)
         }
 
         if(!enable_output_ || acado_getKKT() > lmpcc_config_->kkt_tolerance_ || goal_reached_) {
-            if(acado_getKKT() > lmpcc_config_->kkt_tolerance_){
-                ROS_ERROR("acado_getKKKT()");
-            }
-            else if(goal_reached_){
-                ROS_ERROR("goal_reached_");
-            }
+            // if(acado_getKKT() > lmpcc_config_->kkt_tolerance_){
+            //     ROS_ERROR("acado_getKKKT()");
+            // }
+            // else if(goal_reached_){
+            //     ROS_ERROR("goal_reached_");
+            // }
             publishZeroJointVelocity();
         }
         else {
@@ -749,6 +752,8 @@ void LMPCC::StateCallBack(const geometry_msgs::Pose::ConstPtr& msg)
     current_state_(1) =    msg->position.y;
     current_state_(2) =    msg->orientation.z;
     current_state_(3) =    msg->position.z;
+
+    trajecty_sum_ += std::sqrt(std::pow(current_state_(0) - last_state_(0),2)+std::pow(current_state_(1) - last_state_(1),2));
 }
 
 void LMPCC::ObstacleCallBack(const lmpcc_msgs::lmpcc_obstacle_array& received_obstacles)

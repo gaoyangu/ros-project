@@ -35,9 +35,9 @@ void teamStatusCallback(const lmpcc_msgs::RobotStatus& status_msg){
         //timeBegin = ros::Time::now();
         timeBegin = status_msg.header.stamp;
     }
-    else{
-        ROS_INFO("Team is NOT ready !!!");
-    }   
+    // else{
+    //     ROS_INFO("Team is NOT ready !!!");
+    // }   
 }
 
 int main(int argc, char** argv)

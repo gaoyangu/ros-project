@@ -316,6 +316,7 @@ public:
 
     bool team_ready_;
 
+    double trajecty_sum_;
 private:
     /**
      * @brief spinNode: spin node means ROS is still running
