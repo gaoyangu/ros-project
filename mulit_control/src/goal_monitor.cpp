@@ -24,7 +24,7 @@ void goalStatusCallback(const lmpcc_msgs::RobotStatus& status_msg){
         flag++;
         timeEnd = ros::Time::now();
         goal_time = timeEnd - timeBegin ;
-        ROS_INFO("Robot %d id ready!", robot_id);
+        ROS_INFO("Robot %d id get to goal!", robot_id);
         ROS_INFO("using time: %f !", goal_time.toSec());
     }
 }
@@ -32,7 +32,11 @@ void goalStatusCallback(const lmpcc_msgs::RobotStatus& status_msg){
 void teamStatusCallback(const lmpcc_msgs::RobotStatus& status_msg){
     if(status_msg.header.frame_id == "monitor"){
         ROS_INFO("Team is ready !");
-        timeBegin = ros::Time::now();
+        //timeBegin = ros::Time::now();
+        timeBegin = status_msg.header.stamp;
+    }
+    else{
+        ROS_INFO("Team is NOT ready !!!");
     }   
 }
 
@@ -59,7 +63,7 @@ int main(int argc, char** argv)
 
     // goal_status_sub = nh.subscribe(goal_topic_name, 1, &goalStatusCallback);
     goal_status_sub = nh.subscribe("goal_status", 1, &goalStatusCallback);
-    team_status_sub = nh.subscribe("team_status", 1, &teamStatusCallback);
+    team_status_sub = nh.subscribe("/team_status", 1, &teamStatusCallback);
 
     ros::spin();
 }
