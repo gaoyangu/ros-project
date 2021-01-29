@@ -1,7 +1,7 @@
 <launch>
 
     <!-- 设置launch文件的参数 -->
-    <arg name="world_name" value="$(find mbot_gazebo)/worlds/square.world"/>
+    <arg name="world_name" value="$(find mbot_gazebo)/worlds/work_layout.world"/>
     <arg name="paused" default="false"/>
     <arg name="use_sim_time" default="true"/>
     <arg name="gui" default="true"/>
@@ -33,7 +33,7 @@
 
         <!-- 在gazebo中加载机器人模型-->
         <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-            args="-urdf -model mbot_1 -param robot_description -x 0"/> 
+            args="-urdf -model mbot_1 -param robot_description -x -6 -y -5 -Y 1.57"/> 
     </group>
 
     <group ns="mbot_2">
@@ -51,7 +51,7 @@
 
         <!-- 在gazebo中加载机器人模型-->
         <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-            args="-urdf -model mbot_2 -param robot_description -x 5 -Y 3.14"/> 
+            args="-urdf -model mbot_2 -param robot_description -x -4 -y -5 -Y 1.57"/> 
     </group>
 
     <group ns="mbot_3">
@@ -69,7 +69,7 @@
 
         <!-- 在gazebo中加载机器人模型-->
         <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-            args="-urdf -model mbot_3 -param robot_description -x 3 -y -2 -Y 1.57"/> 
+            args="-urdf -model mbot_3 -param robot_description -x -2 -y -5 -Y 1.57"/> 
     </group>
 
 </launch>

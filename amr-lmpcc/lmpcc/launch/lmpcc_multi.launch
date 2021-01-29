@@ -19,9 +19,9 @@
     
     <rosparam command="load" file="$(find lmpcc)/config/lmpcc_config_parameter.yaml"/>
     <!-- rosparam param="global_path/x">[0, 1, 2, 3, 4, 5]</rosparam -->
-    <rosparam param="global_path/x">[0, 6, 10, 15, 20, 25]</rosparam>
-    <rosparam param="global_path/y">[0, 0, 0, 0, 0, 0]</rosparam>
-    <rosparam param="global_path/theta">[0, 0, 0, 0, 0, 0]</rosparam>
+    <rosparam param="global_path/x">[-6, -6, -9, -6, 0, 6, 9]</rosparam>
+    <rosparam param="global_path/y">[-5, -1, -1, -1, -1.5, -1, -1]</rosparam>
+    <rosparam param="global_path/theta">[1.57, 1.57, 0, 1.57, 0, 0, 0]</rosparam>
 
     <rosparam param="robot_id">1</rosparam>
 

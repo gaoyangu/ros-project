@@ -510,8 +510,8 @@ void LMPCC::controlLoop(const ros::TimerEvent &event)
             acadoVariables.u[3] = 0.0000001;           //slack variable
 
             if(acadoVariables.x[3] > ss[2]) {
-                //if((std::sqrt(std::pow(current_state_(0) - lmpcc_config_->ref_x_.back(),2)+std::pow(current_state_(1) - lmpcc_config_->ref_y_.back(),2))<1) || (current_state_(0)>lmpcc_config_->ref_x_.back())){
-                if((std::sqrt(std::pow(current_state_(0) - lmpcc_config_->ref_x_.at(1),2)+std::pow(current_state_(1) - lmpcc_config_->ref_y_.at(1),2))< 0.5)){
+                if((std::sqrt(std::pow(current_state_(0) - lmpcc_config_->ref_x_.back(),2)+std::pow(current_state_(1) - lmpcc_config_->ref_y_.back(),2))<1) || (current_state_(0)>lmpcc_config_->ref_x_.back())){
+                //if((std::sqrt(std::pow(current_state_(0) - lmpcc_config_->ref_x_.at(1),2)+std::pow(current_state_(1) - lmpcc_config_->ref_y_.at(1),2))< 0.5)){
                     goal_reached_ = true;
 
                     ROS_ERROR_STREAM("GOAL REACHED");
