@@ -1,7 +1,7 @@
 <launch>
 
     <!-- 设置launch文件的参数 -->
-    <arg name="world_name" value="$(find mbot_gazebo)/worlds/empty_corridor.world"/>
+    <arg name="world_name" value="$(find mbot_gazebo)/worlds/work_layout.world"/>
     <arg name="paused" default="false"/>
     <arg name="use_sim_time" default="true"/>
     <arg name="gui" default="true"/>
@@ -31,6 +31,6 @@
 
     <!-- 在gazebo中加载机器人模型-->
     <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen"
-          args="-urdf -model mbot -param robot_description"/> 
+          args="-urdf -model mbot -param robot_description -x -6 -y -5 -Y 1.57"/> 
 
 </launch>
