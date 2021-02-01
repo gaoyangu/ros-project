@@ -1,6 +1,5 @@
 <!-- Reusable launch file for obstacle detection -->
 <launch>
-<group ns="mbot_1">
   <node name="scans_merger" pkg="obstacle_detector" type="scans_merger_node">
     <param name="active"            value="true"/>
     <param name="publish_scan"      value="true"/>
@@ -65,6 +64,5 @@
 
     <remap from="tracked_obstacles" to="obstacles"/>
   </node>
-</group>
 </launch>
 <!-- -->
