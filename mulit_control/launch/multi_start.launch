@@ -4,15 +4,15 @@
 
     <node pkg="mulit_control" type="team_monitor" name="team_monitor" args="3" output="screen"/>
 
-    <group ns="mbot_1">
+    <group ns="jackal0">
         <node pkg="mulit_control" type="goal_monitor" name="goal_monitor" args="1" output="screen"/>
     </group>
 
-    <group ns="mbot_2">
+    <group ns="jackal1">
         <node pkg="mulit_control" type="goal_monitor" name="goal_monitor" args="2" output="screen"/>
     </group>
 
-    <group ns="mbot_3">
+    <group ns="jackal2">
         <node pkg="mulit_control" type="goal_monitor" name="goal_monitor" args="3" output="screen"/>
     </group>
 

@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 
 <launch>
-<group ns="mbot_1">
+<group ns="jackal0">
     <!-- Debug Info -->
     <arg name="debug" default="false" />
     <arg unless="$(arg debug)" name="launch_prefix" value="" />
@@ -14,23 +14,24 @@
     <!--Publish the mobile robot pose -->
     <node name="mobile_robot_state_publisher" pkg="mobile_robot_state_publisher" type="mobile_robot_state_publisher_node" respawn="false" output="screen">
             <rosparam command="load" file="$(arg config)/config/jackal.yaml" />
-            <param name="base_frame" value="mbot_1/base_link"/>
+            <param name="base_frame" value="jackal0/base_link"/>
+            <remap from="odometry/filtered" to="/jackal0/odometry/local_filtered"/>
+            <remap from="robot_state" to="/jackal0/robot_state"/>
     </node>
     
     <rosparam command="load" file="$(find lmpcc)/config/lmpcc_config_parameter.yaml"/>
-    <!-- rosparam param="global_path/x">[0, 1, 2, 3, 4, 5]</rosparam -->
-    <rosparam param="global_path/x">[-6, -6, -9, -6, 0, 6, 9]</rosparam>
-    <rosparam param="global_path/y">[-5, -1, -1, -1, -1.5, -1, -1]</rosparam>
-    <rosparam param="global_path/theta">[1.57, 1.57, 0, 1.57, 0, 0, 0]</rosparam>
+    <rosparam param="global_path/x">[0,  0,  -3, 0,  5,  10, 13, 100]</rosparam>
+    <rosparam param="global_path/y">[0,  4,  4,  4,  2.5,  3, 4, 100]</rosparam>
+    <rosparam param="global_path/theta">[1.57, 3.14, 1.57, 0, 0, 0, 0, 0]</rosparam>
 
-    <rosparam param="robot_id">1</rosparam>
+    <rosparam param="robot_id">0</rosparam>
 
     <node pkg="lmpcc" type="lmpcc_node" name="lmpcc_node" cwd="node" respawn="false" output="screen">
-        <remap from="/robot_collision_space" to="/mbot_1/robot_collision_space"/>
+        <remap from="/robot_collision_space" to="/jackal0/robot_collision_space"/>
     </node>
 </group>
 
-<group ns="mbot_2">
+<group ns="jackal1">
     <!-- Debug Info -->
     <arg name="debug" default="false" />
     <arg unless="$(arg debug)" name="launch_prefix" value="" />
@@ -43,27 +44,28 @@
     <!--Publish the mobile robot pose -->
     <node name="mobile_robot_state_publisher" pkg="mobile_robot_state_publisher" type="mobile_robot_state_publisher_node" respawn="false" output="screen">
             <rosparam command="load" file="$(arg config)/config/jackal.yaml" />
-            <param name="base_frame" value="mbot_2/base_link"/>
+            <param name="base_frame" value="jackal1/base_link"/>
+            <remap from="odometry/filtered" to="/jackal1/odometry/local_filtered"/>
+            <remap from="robot_state" to="/jackal1/robot_state"/>
     </node>
     
     <rosparam command="load" file="$(find lmpcc)/config/lmpcc_config_parameter.yaml"/>
-    <!--rosparam param="global_path/x">[4, 3, 2, 1, 0, -1]</rosparam -->
-    <rosparam param="global_path/x">[0, -1, -10, -15, -20, -25]</rosparam>
-    <rosparam param="global_path/y">[0, 0, 0, 0, 0, 0]</rosparam>
-    <rosparam param="global_path/theta">[3.14, 3.14, 3.14, 3.14, 3.14, 3.14]</rosparam>
 
+    <rosparam param="global_path/x">[3, 3,  -3,  3, 5, 10, 13, 100]</rosparam>
+    <rosparam param="global_path/y">[0, 4, 6.5,  4,  5.5,  5, 2, 100]</rosparam>
+    <rosparam param="global_path/theta">[1.57, 1.57, 3.14, 0, 0, 0, 0, 0]</rosparam>
+
+    <rosparam param="robot_id">1</rosparam>
     <rosparam param="color/r">0.0</rosparam>
     <rosparam param="color/g">0.8</rosparam>
     <rosparam param="color/b">0.0</rosparam>
-
-    <rosparam param="robot_id">2</rosparam>
     
     <node pkg="lmpcc" type="lmpcc_node" name="lmpcc_node" cwd="node" respawn="false" output="screen">
-        <remap from="/robot_collision_space" to="/mbot_2/robot_collision_space"/>
+        <remap from="/robot_collision_space" to="/jackal1/robot_collision_space"/>
     </node>
 </group>
 
-<group ns="mbot_3">
+<group ns="jackal2">
     <!-- Debug Info -->
     <arg name="debug" default="false" />
     <arg unless="$(arg debug)" name="launch_prefix" value="" />
@@ -76,27 +78,27 @@
     <!--Publish the mobile robot pose -->
     <node name="mobile_robot_state_publisher" pkg="mobile_robot_state_publisher" type="mobile_robot_state_publisher_node" respawn="false" output="screen">
             <rosparam command="load" file="$(arg config)/config/jackal.yaml" />
-            <param name="base_frame" value="mbot_3/base_link"/>
+            <param name="base_frame" value="jackal2/base_link"/>
+            <remap from="odometry/filtered" to="/jackal2/odometry/local_filtered"/>
+            <remap from="robot_state" to="/jackal2/robot_state"/>
     </node>
     
     <rosparam command="load" file="$(find lmpcc)/config/lmpcc_config_parameter.yaml"/>
-    <rosparam param="global_path/x">[3, 3, 3, 3, 3, 3]</rosparam>
-    <!-- rosparam param="global_path/y">[-1, 0, 1, 2, 3, 4]</rosparam -->
-    <rosparam param="global_path/y">[0, 3, 10, 15, 20, 25]</rosparam>
-    <rosparam param="global_path/theta">[1.57, 1.57, 1.57, 1.57, 1.57, 1.57]</rosparam>
 
+    <rosparam param="global_path/x">[10.5, 10.5,  14,  10.5, 5, 0, -2, -100]</rosparam>
+    <rosparam param="global_path/y">[0, 3, 4,  3,  2.5,  4, 4, 100]</rosparam>
+    <rosparam param="global_path/theta">[1.57, 1.57, 0, 3.14, 3.14, 3.14, 3.14, 3.14]</rosparam>
+
+    <rosparam param="robot_id">2</rosparam>
     <rosparam param="color/r">0.0</rosparam>
     <rosparam param="color/g">0.0</rosparam>
     <rosparam param="color/b">0.8</rosparam>
-
-    <rosparam param="robot_id">3</rosparam>
-        
+    
     <node pkg="lmpcc" type="lmpcc_node" name="lmpcc_node" cwd="node" respawn="false" output="screen">
-        <remap from="/robot_collision_space" to="/mbot_3/robot_collision_space"/>
+        <remap from="/robot_collision_space" to="/jackal2/robot_collision_space"/>
     </node>
 </group>
 
     <node pkg="lmpcc" type="conversion.py" name="conversion" output="screen"/>
     <node pkg="lmpcc" type="conversion_multi.py" name="conversion_multi" output="screen"/>
-
-</launch>  
+</launch>

@@ -46,9 +46,9 @@ def callback(path_01, path_02):
 rospy.init_node("conversion_multi")
 
 # Create publisher and subscriber
-inputTopic_01 = rospy.resolve_name("/mbot_1/predicted_trajectory")
-inputTopic_02 = rospy.resolve_name("/mbot_2/predicted_trajectory")
-outputTopic = rospy.resolve_name("/mbot_3/ellipse_objects_feed")
+inputTopic_01 = rospy.resolve_name("/jackal0/predicted_trajectory")
+inputTopic_02 = rospy.resolve_name("/jackal1/predicted_trajectory")
+outputTopic = rospy.resolve_name("/jackal2/ellipse_objects_feed")
 
 sub_01 = message_filters.Subscriber(inputTopic_01, Path)
 sub_02 = message_filters.Subscriber(inputTopic_02, Path)
