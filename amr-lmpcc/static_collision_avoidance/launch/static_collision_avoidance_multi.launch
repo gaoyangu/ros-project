@@ -14,6 +14,7 @@
     
   <group ns="jackal0">
     <param name="tf_prefix" value="jackal0"/>
+
     <!-- Publishes the voxel grid to rviz for display -->
     <node pkg="costmap_2d" type="costmap_2d_markers" name="voxel_visualizer">
       <remap from="voxel_grid" to="costmap/voxel_grid"/>
@@ -34,6 +35,7 @@
 
   <group ns="jackal1">
     <param name="tf_prefix" value="jackal1"/>
+
     <!-- Publishes the voxel grid to rviz for display -->
     <node pkg="costmap_2d" type="costmap_2d_markers" name="voxel_visualizer">
       <remap from="voxel_grid" to="costmap/voxel_grid"/>
@@ -54,6 +56,7 @@
 
   <group ns="jackal2">
     <param name="tf_prefix" value="jackal2"/>
+
     <!-- Publishes the voxel grid to rviz for display -->
     <node pkg="costmap_2d" type="costmap_2d_markers" name="voxel_visualizer">
       <remap from="voxel_grid" to="costmap/voxel_grid"/>

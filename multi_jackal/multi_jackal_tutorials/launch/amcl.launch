@@ -1,3 +1,8 @@
+<?xml version="1.0"?>
+
+<!-- reference: 
+      https://github.com/jackal/jackal/blob/melodic-devel/jackal_navigation/launch/include/amcl.launch -->
+
 <launch>
   <arg name="ns" default="jackal0"/>
   <arg name="use_map_topic" default="false"/>
