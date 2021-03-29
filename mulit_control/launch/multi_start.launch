@@ -2,7 +2,7 @@
 
 <launch>
 
-    <node pkg="mulit_control" type="team_monitor" name="team_monitor" args="6" output="screen"/>
+    <node pkg="mulit_control" type="team_monitor" name="team_monitor" args="3" output="screen"/>
 
     <group ns="jackal0">
         <node pkg="mulit_control" type="goal_monitor" name="goal_monitor" args="1" output="screen"/>
@@ -14,18 +14,6 @@
 
     <group ns="jackal2">
         <node pkg="mulit_control" type="goal_monitor" name="goal_monitor" args="3" output="screen"/>
-    </group>
-
-    <group ns="jackal3">
-        <node pkg="mulit_control" type="goal_monitor" name="goal_monitor" args="4" output="screen"/>
-    </group>
-
-    <group ns="jackal4">
-        <node pkg="mulit_control" type="goal_monitor" name="goal_monitor" args="5" output="screen"/>
-    </group>
-
-    <group ns="jackal5">
-        <node pkg="mulit_control" type="goal_monitor" name="goal_monitor" args="6" output="screen"/>
     </group>
 
 </launch>  

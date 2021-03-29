@@ -753,8 +753,9 @@ void LMPCC::StateCallBack(const geometry_msgs::Pose::ConstPtr& msg)
     current_state_(1) =    msg->position.y;
     current_state_(2) =    msg->orientation.z;
     current_state_(3) =    msg->position.z;
-
-    trajecty_sum_ += std::sqrt(std::pow(current_state_(0) - last_state_(0),2)+std::pow(current_state_(1) - last_state_(1),2));
+    if(!goal_reached_){
+        trajecty_sum_ += std::sqrt(std::pow(current_state_(0) - last_state_(0),2)+std::pow(current_state_(1) - last_state_(1),2));
+    }
 }
 
 void LMPCC::ObstacleCallBack(const lmpcc_msgs::lmpcc_obstacle_array& received_obstacles)
