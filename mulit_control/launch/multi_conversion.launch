@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+
+<launch>
+    <!-- node pkg="lmpcc" type="conversion_all.py" name="conversion_all" output="screen"/-->
+    <node pkg="lmpcc" type="obstacle_feed.py" name="conversion_to_1" output="screen" ns="jackal0">
+        <param name="robot_priority" value="5"/>
+        <remap from="/ellipse_objects_feed" to="ellipse_objects_feed"/>
+    </node>
+</launch>  
