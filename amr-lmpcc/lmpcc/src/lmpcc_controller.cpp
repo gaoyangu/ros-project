@@ -511,8 +511,8 @@ void LMPCC::controlLoop(const ros::TimerEvent &event)
 
             if(acadoVariables.x[3] > ss[2]) {
                 //if((std::sqrt(std::pow(current_state_(0) - lmpcc_config_->ref_x_.back(),2)+std::pow(current_state_(1) - lmpcc_config_->ref_y_.back(),2))<1) || (current_state_(0)>lmpcc_config_->ref_x_.back())){
-                //if((std::sqrt(std::pow(current_state_(0) - lmpcc_config_->ref_x_.at(1),2)+std::pow(current_state_(1) - lmpcc_config_->ref_y_.at(1),2))< 0.5)){
-                if((std::sqrt(std::pow(current_state_(0) - lmpcc_config_->ref_x_.at(lmpcc_config_->ref_x_.size()-2),2)+std::pow(current_state_(1) - lmpcc_config_->ref_y_.at(lmpcc_config_->ref_y_.size()-2),2))<1) ){
+                if((std::sqrt(std::pow(current_state_(0) - lmpcc_config_->ref_x_.at(2),2)+std::pow(current_state_(1) - lmpcc_config_->ref_y_.at(2),2))< 0.5)){
+                //if((std::sqrt(std::pow(current_state_(0) - lmpcc_config_->ref_x_.at(lmpcc_config_->ref_x_.size()-2),2)+std::pow(current_state_(1) - lmpcc_config_->ref_y_.at(lmpcc_config_->ref_y_.size()-2),2))<1) ){
                     goal_reached_ = true;
 
                     ROS_ERROR_STREAM("GOAL REACHED");
