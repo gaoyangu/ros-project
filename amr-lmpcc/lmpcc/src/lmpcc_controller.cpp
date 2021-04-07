@@ -116,6 +116,7 @@ bool LMPCC::initialize()
 
         team_ready_ = false;
         trajecty_sum_ = 0;
+        flag_trajecty = false;
 
         // DEBUG
         if (lmpcc_config_->activate_debug_output_)
@@ -753,9 +754,15 @@ void LMPCC::StateCallBack(const geometry_msgs::Pose::ConstPtr& msg)
     current_state_(1) =    msg->position.y;
     current_state_(2) =    msg->orientation.z;
     current_state_(3) =    msg->position.z;
-    if(!goal_reached_){
-        trajecty_sum_ += std::sqrt(std::pow(current_state_(0) - last_state_(0),2)+std::pow(current_state_(1) - last_state_(1),2));
+    if((!goal_reached_) && (flag_trajecty)){
+        //ROS_INFO("current_state_(0) = %f", current_state_(0));
+        //ROS_INFO("last_state_(0) = %f", last_state_(0));
+        //ROS_INFO("current_state_(1) = %f", current_state_(1));
+        //ROS_INFO("last_state_(1) = %f", last_state_(1));
+        trajecty_sum_ += std::sqrt(std::pow(current_state_(0) - last_state_(0),2)+std::pow(current_state_(1) - last_state_(1),2));  
+        //ROS_INFO("sum = %f", trajecty_sum_);  
     }
+    flag_trajecty = true;
 }
 
 void LMPCC::ObstacleCallBack(const lmpcc_msgs::lmpcc_obstacle_array& received_obstacles)
