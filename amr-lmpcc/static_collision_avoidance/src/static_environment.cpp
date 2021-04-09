@@ -414,10 +414,10 @@ void StaticEnvironment::computeConstraint(int x_i, int y_i, double x_path, doubl
     }
 
     // Assign the rectangle values
-    collision_free_xmin[N] = x_min*static_map_.info.resolution + 0.35;
-    collision_free_xmax[N] = x_max*static_map_.info.resolution - 0.35;
-    collision_free_ymin[N] = y_min*static_map_.info.resolution + 0.35;
-    collision_free_ymax[N] = y_max*static_map_.info.resolution - 0.35;
+    collision_free_xmin[N] = x_min*static_map_.info.resolution + 0.2;//0.35
+    collision_free_xmax[N] = x_max*static_map_.info.resolution - 0.2;
+    collision_free_ymin[N] = y_min*static_map_.info.resolution + 0.2;
+    collision_free_ymax[N] = y_max*static_map_.info.resolution - 0.2;
 
     std::vector<double> sqx(4,0), sqy(4,0);
 
