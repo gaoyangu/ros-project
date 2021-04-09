@@ -15,8 +15,8 @@ controller_frequency: 20
 # Dimensions of controlled vehicle
 robot_dimensions:
     n_discs: 1
-    ego_l: 0.3 # 0.5
-    ego_w: 0.3 # 0.4
+    ego_l: 0.5
+    ego_w: 0.4
 
 # Optimal Control Problem dimensions
 state_dim: 6
@@ -45,8 +45,7 @@ parametrization:
 
 # Parameters for predefined reference path
 global_path:
-    # x: [0,5, 10, 15, 20, 25]
-    x: [0, 1, 2, 3, 4, 5]
+    x: [0,5, 10, 15, 20, 25]
     y: [0, 0, 0,0,0,0]
     theta: [0,0,0,0,0,0]
     reference_velocity: 0.5
