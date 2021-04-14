@@ -51,7 +51,7 @@
     
     <rosparam command="load" file="$(find lmpcc)/config/lmpcc_config_parameter.yaml"/>
 
-    <rosparam param="global_path/x">[10.0, 7.0, 2.0, 0.0, -15.0, -20.0]</rosparam>
+    <rosparam param="global_path/x">[12.0, 7.0, 2.0, 0.0, -15.0, -20.0]</rosparam>
     <rosparam param="global_path/y">[2.0, 2.0, 2.0, 2.0, 2.0, 2.0]</rosparam>
     <rosparam param="global_path/theta">[3.14, 3.14, 3.14, 3.14, 3.14, 3.14]</rosparam>
 

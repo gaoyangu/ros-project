@@ -152,7 +152,11 @@ void ReferencePath::InitLocalRefPath(int N_local, int N_seg_per_cloth, std::vect
 
     // Set first entries of the local reference path
     s_local[0] = 0;
-    x_local[0] = X_temp[0] - s0;
+    if(X_temp[0] < X_temp[1]){
+        x_local[0] = X_temp[0] - s0;
+    }else{
+        x_local[0] = X_temp[0] + s0;
+    }
     y_local[0] = Y_temp[0];
 
     // Set local reference path values
