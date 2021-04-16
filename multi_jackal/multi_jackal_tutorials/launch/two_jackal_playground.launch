@@ -14,7 +14,7 @@
   <arg name="config1_id" default="1"/>
   <arg name="config2"    default="front_laser"/>
   <arg name="config2_id" default="2"/>
-  <arg name="world"      default="playground_with_corridor.world"/>
+  <arg name="world"      default="play_ground_18_12.world"/>
 
   <!-- Start Gazebo with an empty world. -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
@@ -30,9 +30,9 @@
     <arg name="config_id"     value="$(arg config0_id)"/>
     <arg name="use_move_base" value="false"/>
     <arg name="use_global_tf" default="false"/>
-    <arg name="x"             value="-5.0"/>
-    <arg name="y"             value="-2.0"/>
-    <arg name="yaw"           value="0.0"/>
+    <arg name="x"             value="-7.0"/>
+    <arg name="y"             value="-5.0"/>
+    <arg name="yaw"           value="1.57"/>
   </include>
   <include file="$(find multi_jackal_base)/launch/jackal_base.launch">
     <arg name="ns"            value="$(arg ns1)"/>
@@ -40,9 +40,9 @@
     <arg name="config_id"     value="$(arg config1_id)"/>
     <arg name="use_move_base" value="false"/>
     <arg name="use_global_tf" default="false"/>
-    <arg name="x"             value="5.0"/>
-    <arg name="y"             value="-2.0"/>
-    <arg name="yaw"           value="3.14"/>
+    <arg name="x"             value="-5.0"/>
+    <arg name="y"             value="-5.0"/>
+    <arg name="yaw"           value="1.57"/>
   </include>
 
   <include file="$(find multi_jackal_base)/launch/jackal_base.launch">
@@ -51,9 +51,9 @@
     <arg name="config_id"     value="$(arg config2_id)"/>
     <arg name="use_move_base" value="false"/>
     <arg name="use_global_tf" default="false"/>
-    <arg name="x"             value="-5.0"/>
-    <arg name="y"             value="2.0"/>
-    <arg name="yaw"           value="0.0"/>
+    <arg name="x"             value="7.0"/>
+    <arg name="y"             value="-5.0"/>
+    <arg name="yaw"           value="1.57"/>
   </include>
 
   <!-- View in RVIZ. -->

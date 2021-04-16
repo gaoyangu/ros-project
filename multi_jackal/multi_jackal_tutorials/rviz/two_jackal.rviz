@@ -314,19 +314,19 @@ Visualization Manager:
       Use Timestamp: false
       Value: true
     - Class: rviz/MarkerArray
-      Enabled: false
+      Enabled: true
       Marker Topic: /jackal0/global_plan
       Name: MarkerArray
       Namespaces:
         {}
       Queue Size: 100
-      Value: false
+      Value: true
     - Class: rviz/MarkerArray
       Enabled: true
       Marker Topic: /jackal0/robot_collision_space
       Name: MarkerArray
       Namespaces:
-        trajectory: true
+        {}
       Queue Size: 100
       Value: true
     - Class: rviz/MarkerArray
@@ -341,7 +341,7 @@ Visualization Manager:
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: false
+      Enabled: true
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -359,12 +359,12 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal0/reference_trajectory_seg1
       Unreliable: false
-      Value: false
+      Value: true
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: false
+      Enabled: true
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -382,12 +382,12 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal0/reference_trajectory_seg2
       Unreliable: false
-      Value: false
+      Value: true
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: false
+      Enabled: true
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -405,12 +405,12 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal0/reference_trajectory_seg3
       Unreliable: false
-      Value: false
+      Value: true
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: false
+      Enabled: true
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -428,12 +428,12 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal0/reference_trajectory_seg4
       Unreliable: false
-      Value: false
+      Value: true
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: false
+      Enabled: true
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -451,7 +451,7 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal0/reference_trajectory_seg5
       Unreliable: false
-      Value: false
+      Value: true
     - Alpha: 1
       Class: rviz/RobotModel
       Collision Enabled: false
@@ -661,7 +661,7 @@ Visualization Manager:
       Marker Topic: /jackal1/robot_collision_space
       Name: MarkerArray
       Namespaces:
-        trajectory: true
+        {}
       Queue Size: 100
       Value: true
     - Class: rviz/MarkerArray
@@ -677,7 +677,7 @@ Visualization Manager:
       Marker Topic: /jackal2/robot_collision_space
       Name: MarkerArray
       Namespaces:
-        trajectory: true
+        {}
       Queue Size: 100
       Value: true
     - Alpha: 1
@@ -800,7 +800,7 @@ Visualization Manager:
       Marker Topic: /jackal1/global_plan
       Name: MarkerArray
       Namespaces:
-        trajectory: true
+        {}
       Queue Size: 100
       Value: true
     - Class: rviz/MarkerArray
@@ -808,7 +808,7 @@ Visualization Manager:
       Marker Topic: /jackal2/global_plan
       Name: MarkerArray
       Namespaces:
-        trajectory: true
+        {}
       Queue Size: 100
       Value: true
     - Class: rviz/MarkerArray
@@ -816,7 +816,7 @@ Visualization Manager:
       Marker Topic: /jackal0/pd_trajectory
       Name: MarkerArray
       Namespaces:
-        trajectory_test: true
+        {}
       Queue Size: 100
       Value: true
     - Class: rviz/MarkerArray
@@ -824,7 +824,7 @@ Visualization Manager:
       Marker Topic: /jackal1/pd_trajectory
       Name: MarkerArray
       Namespaces:
-        trajectory_test: true
+        {}
       Queue Size: 100
       Value: true
     - Class: rviz/MarkerArray
@@ -832,7 +832,7 @@ Visualization Manager:
       Marker Topic: /jackal2/pd_trajectory
       Name: MarkerArray
       Namespaces:
-        trajectory_test: true
+        {}
       Queue Size: 100
       Value: true
     - Alpha: 1
@@ -908,25 +908,25 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 18.948246
+      Distance: 16.6744576
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 0.049324397
-        Y: 0.339398384
-        Z: 0.11060939
+        X: 6.6022687
+        Y: 4.63600206
+        Z: 0.394714057
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.00999999978
-      Pitch: 1.49979639
+      Pitch: 1.56979632
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 4.68539906
+      Yaw: 4.69539881
     Saved: ~
 Window Geometry:
   Displays:
