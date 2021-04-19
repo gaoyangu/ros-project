@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+
+<launch>
+    <node pkg="lmpcc" type="conversion_six_0.py" name="conversion_0" output="screen" ns="jackal0"/>
+    <node pkg="lmpcc" type="conversion_six_1.py" name="conversion_1" output="screen" ns="jackal1"/>
+    <node pkg="lmpcc" type="conversion_six_2.py" name="conversion_2" output="screen" ns="jackal2"/>
+    <node pkg="lmpcc" type="conversion_six_3.py" name="conversion_3" output="screen" ns="jackal3"/>
+    <node pkg="lmpcc" type="conversion_six_4.py" name="conversion_4" output="screen" ns="jackal4"/>
+    <node pkg="lmpcc" type="conversion_six_5.py" name="conversion_5" output="screen" ns="jackal5"/>
+</launch>  
