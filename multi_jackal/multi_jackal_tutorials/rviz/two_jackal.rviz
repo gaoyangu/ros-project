@@ -3,7 +3,8 @@ Panels:
     Help Height: 0
     Name: Displays
     Property Tree Widget:
-      Expanded: ~
+      Expanded:
+        - /MarkerArray12
       Splitter Ratio: 0.563889027
     Tree Height: 509
   - Class: rviz/Selection
@@ -700,7 +701,7 @@ Visualization Manager:
       Radius: 0.0299999993
       Shaft Diameter: 0.100000001
       Shaft Length: 0.100000001
-      Topic: /jackal2/reference_trajectory_seg1
+      Topic: /jackal5/reference_trajectory_seg1
       Unreliable: false
       Value: true
     - Alpha: 1
@@ -723,7 +724,7 @@ Visualization Manager:
       Radius: 0.0299999993
       Shaft Diameter: 0.100000001
       Shaft Length: 0.100000001
-      Topic: /jackal2/reference_trajectory_seg2
+      Topic: /jackal5/reference_trajectory_seg2
       Unreliable: false
       Value: true
     - Alpha: 1
@@ -746,7 +747,7 @@ Visualization Manager:
       Radius: 0.0299999993
       Shaft Diameter: 0.100000001
       Shaft Length: 0.100000001
-      Topic: /jackal2/reference_trajectory_seg3
+      Topic: /jackal5/reference_trajectory_seg3
       Unreliable: false
       Value: true
     - Alpha: 1
@@ -769,7 +770,7 @@ Visualization Manager:
       Radius: 0.0299999993
       Shaft Diameter: 0.100000001
       Shaft Length: 0.100000001
-      Topic: /jackal2/reference_trajectory_seg4
+      Topic: /jackal5/reference_trajectory_seg4
       Unreliable: false
       Value: true
     - Alpha: 1
@@ -792,7 +793,7 @@ Visualization Manager:
       Radius: 0.0299999993
       Shaft Diameter: 0.100000001
       Shaft Length: 0.100000001
-      Topic: /jackal2/reference_trajectory_seg5
+      Topic: /jackal5/reference_trajectory_seg5
       Unreliable: false
       Value: true
     - Class: rviz/MarkerArray
@@ -829,7 +830,7 @@ Visualization Manager:
       Value: true
     - Class: rviz/MarkerArray
       Enabled: true
-      Marker Topic: /jackal2/pd_trajectory
+      Marker Topic: /jackal5/pd_trajectory
       Name: MarkerArray
       Namespaces:
         trajectory_test: true
@@ -1151,16 +1152,16 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 18.6753922
+      Distance: 20.9164391
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.0599999987
         Stereo Focal Distance: 1
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 6.6022687
-        Y: 4.63600206
-        Z: 0.394714057
+        X: 6.1779871
+        Y: 4.94601679
+        Z: 0.395029604
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false
@@ -1189,5 +1190,5 @@ Window Geometry:
   Views:
     collapsed: true
   Width: 1920
-  X: 1544
-  Y: 31
+  X: 1536
+  Y: 23
