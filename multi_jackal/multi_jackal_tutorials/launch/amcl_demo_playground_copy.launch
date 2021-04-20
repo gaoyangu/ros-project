@@ -12,7 +12,7 @@
   <arg name="ns5"        default="jackal5"/>
 
   <!-- Run the map server -->
-  <arg name="map_file" default="$(find multi_jackal_tutorials)/maps/playground_18_12.yaml"/>
+  <arg name="map_file" default="$(find multi_jackal_tutorials)/maps/playground_with_corridor.yaml"/>
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)"/>
 
   <!--- Run AMCL -->
@@ -20,8 +20,8 @@
     <arg name="ns" value="$(arg ns0)"/>
     <arg name="use_map_topic"   value="true" />
     <arg name="scan_topic"      value="/$(arg ns0)/front/scan" />
-    <arg name="initial_pose_x" default="-1.0" />
-    <arg name="initial_pose_y" default="8.0" />
+    <arg name="initial_pose_x" default="2.0" />
+    <arg name="initial_pose_y" default="7.0" />
     <arg name="initial_pose_a"  value="0.0" />
   </include>
 
@@ -31,8 +31,8 @@
     <arg name="ns" value="$(arg ns1)"/>
     <arg name="use_map_topic"   value="true" />
     <arg name="scan_topic"      value="/$(arg ns1)/front/scan" />
-    <arg name="initial_pose_x" default="-1.0" />
-    <arg name="initial_pose_y" default="6.0" />
+    <arg name="initial_pose_x" default="2.0" />
+    <arg name="initial_pose_y" default="3.0" />
     <arg name="initial_pose_a"  value="0.0" />
   </include>
 
@@ -42,8 +42,8 @@
     <arg name="ns" value="$(arg ns2)"/>
     <arg name="use_map_topic"   value="true" />
     <arg name="scan_topic"      value="/$(arg ns2)/front/scan" />
-    <arg name="initial_pose_x" default="-1.0" />
-    <arg name="initial_pose_y" default="4.0" />
+    <arg name="initial_pose_x" default="2.0" />
+    <arg name="initial_pose_y" default="1.0" />
     <arg name="initial_pose_a"  value="0.0" />
   </include>
 
@@ -54,8 +54,8 @@
     <arg name="ns" value="$(arg ns3)"/>
     <arg name="use_map_topic"   value="true" />
     <arg name="scan_topic"      value="/$(arg ns3)/front/scan" />
-    <arg name="initial_pose_x" default="15.0" />
-    <arg name="initial_pose_y" default="4.0" />
+    <arg name="initial_pose_x" default="12.0" />
+    <arg name="initial_pose_y" default="1.0" />
     <arg name="initial_pose_a"  value="3.14" />
   </include>
 
@@ -65,8 +65,8 @@
     <arg name="ns" value="$(arg ns4)"/>
     <arg name="use_map_topic"   value="true" />
     <arg name="scan_topic"      value="/$(arg ns4)/front/scan" />
-    <arg name="initial_pose_x" default="15.0" />
-    <arg name="initial_pose_y" default="6.0" />
+    <arg name="initial_pose_x" default="12.0" />
+    <arg name="initial_pose_y" default="5.0" />
     <arg name="initial_pose_a"  value="3.14" />
   </include>
 
@@ -76,8 +76,8 @@
     <arg name="ns" value="$(arg ns5)"/>
     <arg name="use_map_topic"   value="true" />
     <arg name="scan_topic"      value="/$(arg ns5)/front/scan" />
-    <arg name="initial_pose_x" default="15.0" />
-    <arg name="initial_pose_y" default="8.0" />
+    <arg name="initial_pose_x" default="12.0" />
+    <arg name="initial_pose_y" default="7.0" />
     <arg name="initial_pose_a"  value="3.14" />
   </include>
 
