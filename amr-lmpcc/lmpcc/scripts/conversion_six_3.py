@@ -53,7 +53,7 @@ sub_05 = message_filters.Subscriber(inputTopic_05, Path)
 ts = message_filters.TimeSynchronizer([sub_01, sub_02, sub_03, sub_04, sub_05], 10)
 ts.registerCallback(callback)
 
-pub = rospy.Publisher(outputTopic, lmpcc_obstacle_array, queue_size=5)
+pub = rospy.Publisher(outputTopic, lmpcc_obstacle_array, queue_size=15)
 
 rospy.loginfo("Re-publishing")
 rospy.spin()

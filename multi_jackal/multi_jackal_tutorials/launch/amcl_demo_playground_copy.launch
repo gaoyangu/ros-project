@@ -31,7 +31,7 @@
     <arg name="ns" value="$(arg ns1)"/>
     <arg name="use_map_topic"   value="true" />
     <arg name="scan_topic"      value="/$(arg ns1)/front/scan" />
-    <arg name="initial_pose_x" default="2.0" />
+    <arg name="initial_pose_x" default="1.0" />
     <arg name="initial_pose_y" default="3.0" />
     <arg name="initial_pose_a"  value="0.0" />
   </include>
@@ -65,7 +65,7 @@
     <arg name="ns" value="$(arg ns4)"/>
     <arg name="use_map_topic"   value="true" />
     <arg name="scan_topic"      value="/$(arg ns4)/front/scan" />
-    <arg name="initial_pose_x" default="12.0" />
+    <arg name="initial_pose_x" default="13.0" />
     <arg name="initial_pose_y" default="5.0" />
     <arg name="initial_pose_a"  value="3.14" />
   </include>
