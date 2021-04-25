@@ -23,7 +23,7 @@
   <arg name="config4_id" default="4"/>
   <arg name="config5"    default="front_laser"/>
   <arg name="config5_id" default="5"/>
-  <arg name="world"      default="playground_with_corridor.world"/>
+  <arg name="world"      default="playground_with_obstacle.world"/>
 
   <!-- Start Gazebo with an empty world. -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
@@ -39,7 +39,7 @@
     <arg name="config_id"     value="$(arg config0_id)"/>
     <arg name="use_move_base" value="false"/>
     <arg name="use_global_tf" default="false"/>
-    <arg name="x"             value="-5.0"/>
+    <arg name="x"             value="-6.0"/>
     <arg name="y"             value="3.0"/>
     <arg name="yaw"           value="0.0"/>
   </include>
@@ -50,7 +50,7 @@
     <arg name="use_move_base" value="false"/>
     <arg name="use_global_tf" default="false"/>
     <arg name="x"             value="-6.0"/>
-    <arg name="y"             value="-1.0"/>
+    <arg name="y"             value="0.0"/>
     <arg name="yaw"           value="0.0"/>
   </include>
 
@@ -60,7 +60,7 @@
     <arg name="config_id"     value="$(arg config2_id)"/>
     <arg name="use_move_base" value="false"/>
     <arg name="use_global_tf" default="false"/>
-    <arg name="x"             value="-5.0"/>
+    <arg name="x"             value="-6.0"/>
     <arg name="y"             value="-3.0"/>
     <arg name="yaw"           value="0.0"/>
   </include>
@@ -72,7 +72,7 @@
     <arg name="config_id"     value="$(arg config3_id)"/>
     <arg name="use_move_base" value="false"/>
     <arg name="use_global_tf" default="false"/>
-    <arg name="x"             value="5.0"/>
+    <arg name="x"             value="6.0"/>
     <arg name="y"             value="-3.0"/>
     <arg name="yaw"           value="3.14"/>
   </include>
@@ -83,7 +83,7 @@
     <arg name="use_move_base" value="false"/>
     <arg name="use_global_tf" default="false"/>
     <arg name="x"             value="6.0"/>
-    <arg name="y"             value="1.0"/>
+    <arg name="y"             value="0.0"/>
     <arg name="yaw"           value="3.14"/>
   </include>
 
@@ -93,7 +93,7 @@
     <arg name="config_id"     value="$(arg config5_id)"/>
     <arg name="use_move_base" value="false"/>
     <arg name="use_global_tf" default="false"/>
-    <arg name="x"             value="5.0"/>
+    <arg name="x"             value="6.0"/>
     <arg name="y"             value="3.0"/>
     <arg name="yaw"           value="3.14"/>
   </include>
