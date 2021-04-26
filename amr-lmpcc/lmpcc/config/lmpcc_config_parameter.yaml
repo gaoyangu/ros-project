@@ -52,7 +52,7 @@ global_path:
 
 # Collision avoidance parameters
 collision_avoidance:
-    n_obstacles: 6 #4
+    n_obstacles: 4 #4
 
 color:
     r: 0.8

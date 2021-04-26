@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+
+<launch>
+    <node pkg="lmpcc" type="conversion_0.py" name="conversion_0" output="screen" ns="jackal5"/>
+    <node pkg="lmpcc" type="conversion_1.py" name="conversion_1" output="screen" ns="jackal4"/>
+    <node pkg="lmpcc" type="conversion_2.py" name="conversion_2" output="screen" ns="jackal3"/>
+</launch>  
