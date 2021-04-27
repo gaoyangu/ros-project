@@ -12,7 +12,7 @@
   <arg name="ns5"        default="jackal5"/>
 
   <!-- Run the map server -->
-  <arg name="map_file" default="$(find multi_jackal_tutorials)/maps/playground_with_obstacle_v1.yaml"/>
+  <arg name="map_file" default="$(find multi_jackal_tutorials)/maps/playground_with_obstacle_v2.yaml"/>
   <node name="map_server" pkg="map_server" type="map_server" args="$(arg map_file)"/>
 
   <!--- Run AMCL -->

@@ -23,7 +23,7 @@
   <arg name="config4_id" default="4"/>
   <arg name="config5"    default="front_laser"/>
   <arg name="config5_id" default="5"/>
-  <arg name="world"      default="playground_with_obstacle_v1.world"/>
+  <arg name="world"      default="playground_with_obstacle_v2.world"/>
 
   <!-- Start Gazebo with an empty world. -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
