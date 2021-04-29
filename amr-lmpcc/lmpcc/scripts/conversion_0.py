@@ -38,8 +38,8 @@ def newMessageReceived(path):
 rospy.init_node("conversion")
 
 # Create publisher and subscriber
-inputTopic = rospy.resolve_name("/jackal0/predicted_trajectory")
-outputTopic = rospy.resolve_name("/jackal5/ellipse_objects_feed")
+inputTopic = rospy.resolve_name("/jackal5/predicted_trajectory")
+outputTopic = rospy.resolve_name("/jackal0/ellipse_objects_feed")
 sub = rospy.Subscriber(inputTopic, Path, newMessageReceived, queue_size=5)
 pub = rospy.Publisher(outputTopic, lmpcc_obstacle_array, queue_size=5)
 

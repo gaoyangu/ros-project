@@ -21,7 +21,7 @@
     <arg name="use_map_topic"   value="true" />
     <arg name="scan_topic"      value="/$(arg ns0)/front/scan" />
     <arg name="initial_pose_x" default="-6.0" />
-    <arg name="initial_pose_y" default="3.0" />
+    <arg name="initial_pose_y" default="4.5" />
     <arg name="initial_pose_a"  value="0.0" />
   </include>
 
@@ -43,7 +43,7 @@
     <arg name="use_map_topic"   value="true" />
     <arg name="scan_topic"      value="/$(arg ns2)/front/scan" />
     <arg name="initial_pose_x" default="-6.0" />
-    <arg name="initial_pose_y" default="-3.0" />
+    <arg name="initial_pose_y" default="-3.5" />
     <arg name="initial_pose_a"  value="0.0" />
   </include>
 
@@ -55,7 +55,7 @@
     <arg name="use_map_topic"   value="true" />
     <arg name="scan_topic"      value="/$(arg ns3)/front/scan" />
     <arg name="initial_pose_x" default="6.0" />
-    <arg name="initial_pose_y" default="-3.0" />
+    <arg name="initial_pose_y" default="-3.5" />
     <arg name="initial_pose_a"  value="3.14" />
   </include>
 
@@ -77,7 +77,7 @@
     <arg name="use_map_topic"   value="true" />
     <arg name="scan_topic"      value="/$(arg ns5)/front/scan" />
     <arg name="initial_pose_x" default="6.0" />
-    <arg name="initial_pose_y" default="3.0" />
+    <arg name="initial_pose_y" default="4.5" />
     <arg name="initial_pose_a"  value="3.14" />
   </include>
 

@@ -341,7 +341,7 @@ Visualization Manager:
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: true
+      Enabled: false
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -359,12 +359,12 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal0/reference_trajectory_seg1
       Unreliable: false
-      Value: true
+      Value: false
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: true
+      Enabled: false
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -382,12 +382,12 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal0/reference_trajectory_seg2
       Unreliable: false
-      Value: true
+      Value: false
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: true
+      Enabled: false
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -405,12 +405,12 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal0/reference_trajectory_seg3
       Unreliable: false
-      Value: true
+      Value: false
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: true
+      Enabled: false
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -428,12 +428,12 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal0/reference_trajectory_seg4
       Unreliable: false
-      Value: true
+      Value: false
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: true
+      Enabled: false
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -451,7 +451,7 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal0/reference_trajectory_seg5
       Unreliable: false
-      Value: true
+      Value: false
     - Alpha: 1
       Class: rviz/RobotModel
       Collision Enabled: false
@@ -545,7 +545,7 @@ Visualization Manager:
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: true
+      Enabled: false
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -563,12 +563,12 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal1/reference_trajectory_seg1
       Unreliable: false
-      Value: true
+      Value: false
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: true
+      Enabled: false
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -586,12 +586,12 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal1/reference_trajectory_seg2
       Unreliable: false
-      Value: true
+      Value: false
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: true
+      Enabled: false
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -609,12 +609,12 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal1/reference_trajectory_seg3
       Unreliable: false
-      Value: true
+      Value: false
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: true
+      Enabled: false
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -632,12 +632,12 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal1/reference_trajectory_seg4
       Unreliable: false
-      Value: true
+      Value: false
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: true
+      Enabled: false
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -655,7 +655,7 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal1/reference_trajectory_seg5
       Unreliable: false
-      Value: true
+      Value: false
     - Class: rviz/MarkerArray
       Enabled: true
       Marker Topic: /jackal1/robot_collision_space
@@ -684,7 +684,7 @@ Visualization Manager:
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: true
+      Enabled: false
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -702,12 +702,12 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal5/reference_trajectory_seg1
       Unreliable: false
-      Value: true
+      Value: false
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: true
+      Enabled: false
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -725,12 +725,12 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal5/reference_trajectory_seg2
       Unreliable: false
-      Value: true
+      Value: false
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: true
+      Enabled: false
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -748,12 +748,12 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal5/reference_trajectory_seg3
       Unreliable: false
-      Value: true
+      Value: false
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: true
+      Enabled: false
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -771,12 +771,12 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal5/reference_trajectory_seg4
       Unreliable: false
-      Value: true
+      Value: false
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: true
+      Enabled: false
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -794,7 +794,7 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal5/reference_trajectory_seg5
       Unreliable: false
-      Value: true
+      Value: false
     - Class: rviz/MarkerArray
       Enabled: true
       Marker Topic: /jackal1/global_plan
@@ -1130,7 +1130,7 @@ Visualization Manager:
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: true
+      Enabled: false
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -1148,12 +1148,12 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal2/reference_trajectory_seg1
       Unreliable: false
-      Value: true
+      Value: false
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: true
+      Enabled: false
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -1171,12 +1171,12 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal2/reference_trajectory_seg2
       Unreliable: false
-      Value: true
+      Value: false
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: true
+      Enabled: false
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -1194,12 +1194,12 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal2/reference_trajectory_seg3
       Unreliable: false
-      Value: true
+      Value: false
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: true
+      Enabled: false
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -1217,12 +1217,12 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal2/reference_trajectory_seg4
       Unreliable: false
-      Value: true
+      Value: false
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: true
+      Enabled: false
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -1240,12 +1240,12 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal2/reference_trajectory_seg5
       Unreliable: false
-      Value: true
+      Value: false
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: true
+      Enabled: false
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -1263,12 +1263,12 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal3/reference_trajectory_seg1
       Unreliable: false
-      Value: true
+      Value: false
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: true
+      Enabled: false
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -1286,12 +1286,12 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal3/reference_trajectory_seg2
       Unreliable: false
-      Value: true
+      Value: false
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: true
+      Enabled: false
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -1309,12 +1309,12 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal3/reference_trajectory_seg3
       Unreliable: false
-      Value: true
+      Value: false
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: true
+      Enabled: false
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -1332,12 +1332,12 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal3/reference_trajectory_seg4
       Unreliable: false
-      Value: true
+      Value: false
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: true
+      Enabled: false
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -1355,12 +1355,12 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal3/reference_trajectory_seg5
       Unreliable: false
-      Value: true
+      Value: false
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: true
+      Enabled: false
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -1378,12 +1378,12 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal4/reference_trajectory_seg1
       Unreliable: false
-      Value: true
+      Value: false
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: true
+      Enabled: false
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -1401,12 +1401,12 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal4/reference_trajectory_seg2
       Unreliable: false
-      Value: true
+      Value: false
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: true
+      Enabled: false
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -1424,12 +1424,12 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal4/reference_trajectory_seg3
       Unreliable: false
-      Value: true
+      Value: false
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: true
+      Enabled: false
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -1447,12 +1447,12 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal4/reference_trajectory_seg4
       Unreliable: false
-      Value: true
+      Value: false
     - Alpha: 1
       Buffer Length: 1
       Class: rviz/Path
       Color: 25; 255; 0
-      Enabled: true
+      Enabled: false
       Head Diameter: 0.300000012
       Head Length: 0.200000003
       Length: 0.300000012
@@ -1470,7 +1470,7 @@ Visualization Manager:
       Shaft Length: 0.100000001
       Topic: /jackal4/reference_trajectory_seg5
       Unreliable: false
-      Value: true
+      Value: false
     - Class: rviz/MarkerArray
       Enabled: true
       Marker Topic: /jackal2/pd_trajectory
@@ -1527,9 +1527,9 @@ Visualization Manager:
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: 6.1779871
-        Y: 4.94601679
-        Z: 0.395029604
+        X: 1.73661757
+        Y: 1.41534412
+        Z: 0.391423762
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.0500000007
       Invert Z Axis: false

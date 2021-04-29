@@ -20,8 +20,8 @@
     </node>
     
     <rosparam command="load" file="$(find lmpcc)/config/lmpcc_config_parameter.yaml"/>
-    <rosparam param="global_path/x">[-6.0, -2.0, 0.0, 6.0, 10.0]</rosparam>
-    <rosparam param="global_path/y">[3.0, 4.5, 4.5, 3.0, 3.0]</rosparam>
+    <rosparam param="global_path/x">[-6.0, -2.0, 2.0, 5.0, 10.0]</rosparam>
+    <rosparam param="global_path/y">[4.5, 4.5, 4.5, 4.5, 4.5]</rosparam>
     <rosparam param="global_path/theta">[0.0, 0.0, 0.0, 0.0, 0.0]</rosparam>
 
     <rosparam param="robot_id">0</rosparam>
@@ -51,7 +51,7 @@
     
     <rosparam command="load" file="$(find lmpcc)/config/lmpcc_config_parameter.yaml"/>
 
-    <rosparam param="global_path/x">[-6.0, 0.0, 3.0, 6.0, 10.0]</rosparam>
+    <rosparam param="global_path/x">[-6.0, 0.0, 3.0, 5.0, 10.0]</rosparam>
     <rosparam param="global_path/y">[0.0, 0.0, 2.0, 0.0, 0.0]</rosparam>
     <rosparam param="global_path/theta">[0.0, 0.0, 0.0, 0.0, 0.0]</rosparam>
 
@@ -85,8 +85,8 @@
     
     <rosparam command="load" file="$(find lmpcc)/config/lmpcc_config_parameter.yaml"/>
 
-    <rosparam param="global_path/x">[-6.0, -2.0, 2.0, 6.0, 10.0]</rosparam>
-    <rosparam param="global_path/y">[-3.0, -3.0, -3.0, -3.0, -3.0]</rosparam>
+    <rosparam param="global_path/x">[-6.0, -2.0, 2.0, 5.0, 10.0]</rosparam>
+    <rosparam param="global_path/y">[-3.5, -3.5, -3.5, -3.5, -3.5]</rosparam>
     <rosparam param="global_path/theta">[0.0, 0.0, 0.0, 0.0, 0.0]</rosparam>
 
     <rosparam param="robot_id">2</rosparam>
@@ -118,11 +118,14 @@
     </node>
     
     <rosparam command="load" file="$(find lmpcc)/config/lmpcc_config_parameter.yaml"/>
-    <rosparam param="global_path/x">[6.0, 2.0, -3.0, -6.0, -10.0]</rosparam>
-    <rosparam param="global_path/y">[-3.0, -3.0, -3.0, -3.0, -3.0]</rosparam>
+    <rosparam param="global_path/x">[6.0, 2.0, -2.0, -5.0, -10.0]</rosparam>
+    <rosparam param="global_path/y">[-3.5, -3.5, -3.5, -3.5, -3.5]</rosparam>
     <rosparam param="global_path/theta">[3.14, 3.14, 3.14, 3.14, 3.14]</rosparam>
 
     <rosparam param="robot_id">3</rosparam>
+    <rosparam param="color/r">0.8</rosparam>
+    <rosparam param="color/g">0.0</rosparam>
+    <rosparam param="color/b">0.0</rosparam>
 
     <node pkg="lmpcc" type="lmpcc_node" name="lmpcc_node" cwd="node" respawn="false" output="screen">
         <remap from="/robot_collision_space" to="/jackal3/robot_collision_space"/>
@@ -149,14 +152,14 @@
     
     <rosparam command="load" file="$(find lmpcc)/config/lmpcc_config_parameter.yaml"/>
 
-    <rosparam param="global_path/x">[6.0, 4.0, 0.0, -6.0, -10.0]</rosparam>
+    <rosparam param="global_path/x">[6.0, 4.0, 0.0, -5.0, -10.0]</rosparam>
     <rosparam param="global_path/y">[0.0, 2.0, 0.0, 0.0, 0.0]</rosparam>
     <rosparam param="global_path/theta">[3.14, 3.14, 3.14, 3.14, 3.14]</rosparam>
 
     <rosparam param="robot_id">4</rosparam>
     <rosparam param="color/r">0.0</rosparam>
-    <rosparam param="color/g">0.8</rosparam>
-    <rosparam param="color/b">0.0</rosparam>
+    <rosparam param="color/g">0.0</rosparam>
+    <rosparam param="color/b">0.8</rosparam>
     
     <node pkg="lmpcc" type="lmpcc_node" name="lmpcc_node" cwd="node" respawn="false" output="screen">
         <remap from="/robot_collision_space" to="/jackal4/robot_collision_space"/>
@@ -183,14 +186,14 @@
     
     <rosparam command="load" file="$(find lmpcc)/config/lmpcc_config_parameter.yaml"/>
 
-    <rosparam param="global_path/x">[6.0, 2.0, 0.0, -6.0, -10.0]</rosparam>
-    <rosparam param="global_path/y">[3.0, 4.5, 4.5, 3.0, 3.0]</rosparam>
+    <rosparam param="global_path/x">[6.0, 2.0, -2.0, -5.0, -10.0]</rosparam>
+    <rosparam param="global_path/y">[4.5, 4.5, 4.5, 4.5, 4.5]</rosparam>
     <rosparam param="global_path/theta">[3.14, 3.14, 3.14, 3.14, 3.14]</rosparam>
 
     <rosparam param="robot_id">5</rosparam>
     <rosparam param="color/r">0.0</rosparam>
-    <rosparam param="color/g">0.0</rosparam>
-    <rosparam param="color/b">0.8</rosparam>
+    <rosparam param="color/g">0.8</rosparam>
+    <rosparam param="color/b">0.0</rosparam>
     
     <node pkg="lmpcc" type="lmpcc_node" name="lmpcc_node" cwd="node" respawn="false" output="screen">
         <remap from="/robot_collision_space" to="/jackal5/robot_collision_space"/>
