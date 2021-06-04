@@ -286,6 +286,7 @@ public:
 
 	//Controller options
     real_t te_, te_collision_free_;
+    real_t max_time;
 
 	tf2_ros::TransformBroadcaster state_pub_, path_pose_pub_;
 	std_msgs::Float64 cost_;

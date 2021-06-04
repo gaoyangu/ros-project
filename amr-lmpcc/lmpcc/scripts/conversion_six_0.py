@@ -16,7 +16,7 @@ def callback(path_01, path_02, path_03, path_04, path_05):
     for path in path_list:
         obstacle = lmpcc_obstacle()
         obstacle.trajectory.poses = path.poses
-        rospy.loginfo("pose: %.2f " % obstacle.trajectory.poses[0].pose.position.x)
+        # rospy.loginfo("pose: %.2f " % obstacle.trajectory.poses[0].pose.position.x)
         for pose in path.poses:
             obstacle.major_semiaxis.append(0.2)
             obstacle.minor_semiaxis.append(0.2)
