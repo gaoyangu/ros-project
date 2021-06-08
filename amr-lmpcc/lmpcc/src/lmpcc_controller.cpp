@@ -118,6 +118,8 @@ bool LMPCC::initialize()
         trajecty_sum_ = 0;
         flag_trajecty = false;
 
+        max_time = 0;
+
         // DEBUG
         if (lmpcc_config_->activate_debug_output_)
         {
@@ -518,7 +520,8 @@ void LMPCC::controlLoop(const ros::TimerEvent &event)
 
                     ROS_ERROR_STREAM("GOAL REACHED");
                     ROS_INFO("mbot_%d, goal: x = %f, y = %f", lmpcc_config_->robot_id, lmpcc_config_->ref_x_.at(lmpcc_config_->ref_x_.size()-2), lmpcc_config_->ref_y_.at(lmpcc_config_->ref_y_.size()-2));
-                    ROS_INFO("mbot_%d, sum = %f", lmpcc_config_->robot_id, trajecty_sum_);  
+                    ROS_INFO("mbot_%d, sum = %f", lmpcc_config_->robot_id, trajecty_sum_); 
+                    ROS_INFO("mbot_%d, max time = %f us", lmpcc_config_->robot_id, max_time);  
                     
                     lmpcc_msgs::RobotStatus status_msgs;
                     status_msgs.header.stamp = ros::Time::now();
@@ -697,7 +700,11 @@ void LMPCC::controlLoop(const ros::TimerEvent &event)
 
             te_ = acado_toc(&t);
             if (lmpcc_config_->activate_timing_output_)
-                ROS_INFO_STREAM("Solve time " << te_ * 1e6 << " us");
+                //ROS_INFO_STREAM("Solve time " << te_ * 1e6 << " us");
+                ROS_INFO("mbot_%d, Solve time = %f us", lmpcc_config_->robot_id, te_ * 1e6);    
+                if(te_ * 1e6 > max_time){
+                    max_time = te_ * 1e6;
+                }
 
             if (lmpcc_config_->activate_feedback_message_){
                 publishFeedback(j,te_);

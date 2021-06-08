@@ -5,7 +5,7 @@ gazebo_simulation: false
 # Debug modes
 activate_output: true
 activate_debug_output: false
-activate_timing_output: false
+activate_timing_output: true #false
 activate_visualization: true
 activate_feedback_message: true
 
@@ -79,4 +79,4 @@ acado_config:
     kkt_tolerance: 1e-3
     integrator_tolerance: 1e-3
     time_horizon: 3.0
-    discretization_intervals: 15
+    discretization_intervals: 20
