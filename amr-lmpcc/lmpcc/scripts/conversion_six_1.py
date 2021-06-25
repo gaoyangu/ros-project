@@ -36,11 +36,11 @@ def callback(path_01, path_02, path_03, path_04, path_05):
 rospy.init_node("conversion_multi_1")
 
 # Create publisher and subscriber
-inputTopic_01 = rospy.resolve_name("/jackal5/predicted_trajectory")
-inputTopic_02 = rospy.resolve_name("/jackal4/predicted_trajectory")
-inputTopic_03 = rospy.resolve_name("/jackal3/predicted_trajectory")
-inputTopic_04 = rospy.resolve_name("/jackal2/predicted_trajectory")
-inputTopic_05 = rospy.resolve_name("/jackal0/predicted_trajectory")
+inputTopic_01 = rospy.resolve_name("/jackal0/predicted_trajectory")
+inputTopic_02 = rospy.resolve_name("/jackal5/predicted_trajectory")
+inputTopic_03 = rospy.resolve_name("/jackal4/predicted_trajectory")
+inputTopic_04 = rospy.resolve_name("/jackal3/predicted_trajectory")
+inputTopic_05 = rospy.resolve_name("/jackal2/predicted_trajectory")
 
 outputTopic = rospy.resolve_name("/jackal1/ellipse_objects_feed")
 
